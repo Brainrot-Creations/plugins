@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Brainrot-Creations/claude-plugins"><img src="https://img.shields.io/badge/claude--code-plugin--marketplace-blue" alt="Claude Code Plugin Marketplace" /></a>
+  <a href="https://github.com/Brainrot-Creations/plugins"><img src="https://img.shields.io/badge/claude--code-plugin--marketplace-blue" alt="Claude Code Plugin Marketplace" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License" /></a>
 </p>
 
@@ -16,7 +16,7 @@
 In Claude Code:
 
 ```
-/plugin marketplace add Brainrot-Creations/claude-plugins
+/plugin marketplace add Brainrot-Creations/plugins
 ```
 
 Then install individual plugins:
