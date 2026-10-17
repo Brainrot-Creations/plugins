@@ -13,14 +13,14 @@ Nothing up front. Ask only for what a step needs.
 
 ## Steps
 
-1. **Check sign-in and existing portfolios.** Call `portfolio_list`.
+1. **Check sign-in and existing portfolios.** Call `portfolio_view` with `show: ["portfolios", "summary"]`.
    - If the tool asks for sign-in or returns a 401, tell the user to connect Brainrot Finance with their Brainrot account (they approve it on brainrotcreations.com), then stop until they have.
-   - If they already have a portfolio with holdings, say so, call `portfolio_value` to show it, and stop: setup is done.
-2. **Base currency.** Ask which currency totals should be shown in (for example USD or INR). Don't assume one from their location or language. Set it with `portfolio_settings` once the portfolio exists, or pass it as `baseCurrency` on the first `portfolio_add`.
-3. **Holdings.** Ask where they invest (brokers or platforms, and accounts within them) and what they hold. For each holding you need a symbol or name, quantity, price per unit, date and currency. Ask for anything missing; never invent a price, quantity or date. Add them with `portfolio_add`, using the platform and account as the `path` (for example `["Robinhood", "Individual"]`).
-   - If they paste a full export or a `transactions.json` document, use `portfolio_replace` instead, after confirming it should replace the empty portfolio.
-4. **Show the result.** Call `portfolio_value` and summarise the total, the largest holdings and anything priced at cost because no live price was found.
-5. **Tell them what's next:** they can ask for its value any time, add or edit transactions in plain language, and undo any change (`portfolio_undo`).
+   - If they already have a portfolio with holdings, say so, call `portfolio_view` (default `show`) to show its value and holdings, and stop: setup is done.
+2. **Base currency.** Ask which currency totals should be shown in (for example USD or INR). Don't assume one from their location or language. Pass it as `baseCurrency` on the first `portfolio_add`, or set it later with `portfolio_edit` (`{action: "settings", baseCurrency}`).
+3. **Holdings.** Ask where they invest (brokers or platforms, and accounts within them) and what they hold. For each holding you need a symbol or name, quantity, price per unit, date and currency. Use `search` if you need to find a symbol. Ask for anything missing; never invent a price, quantity or date. Add them with `portfolio_add`, using the platform and account as the `path` (for example `["Robinhood", "Individual"]`).
+   - If they paste a full export or a `transactions.json` document, use `portfolio_edit` with `{action: "replace", document}` instead, after confirming it should replace the empty portfolio.
+4. **Show the result.** Call `portfolio_view` and summarise the total, the largest holdings and anything valued at cost because no live price was found (see `warnings`).
+5. **Tell them what's next:** they can ask for its value any time, add or edit transactions in plain language, and undo any change (`portfolio_edit` with `{action: "undo"}`).
 
 ## Output
 

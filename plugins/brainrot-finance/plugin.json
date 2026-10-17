@@ -54,26 +54,26 @@
             {
               "description": "Private-market price",
               "prompt": "What's SpaceX trading at on Hiive?",
-              "tools_triggered": "hiive_quote",
+              "tools_triggered": "quote",
               "expected_behavior": "Returns SpaceX's latest Hiive indicative price per share and its date, noting it's a secondary-market price."
             },
             {
               "description": "Gold rate in an Indian city",
               "prompt": "What's the 24k gold rate in Mumbai today?",
-              "tools_triggered": "gold_rate",
+              "tools_triggered": "quote",
               "expected_behavior": "Returns today's 24K gold rate in INR per gram and per 10 grams for Mumbai."
             },
             {
               "description": "Value the signed-in user's portfolio",
               "prompt": "What's my portfolio worth in USD?",
-              "tools_triggered": "portfolio_value",
+              "tools_triggered": "portfolio_view",
               "expected_behavior": "Signed in as the test account, returns total value in USD with each holding, cash, P&L and return %."
             },
             {
               "description": "Add a transaction, then undo it",
               "prompt": "Add a buy of 2 MSFT at $400 on 2026-01-15 to my Robinhood account, then undo it.",
-              "tools_triggered": "portfolio_add, portfolio_undo",
-              "expected_behavior": "Adds the MSFT buy under Robinhood, confirms it, then restores the previous version so the portfolio is unchanged."
+              "tools_triggered": "portfolio_add, portfolio_edit",
+              "expected_behavior": "Adds the MSFT buy under Robinhood > Individual with portfolio_add, confirms it, then reverts with portfolio_edit (action undo) so the portfolio is unchanged."
             }
           ],
           "negative": [

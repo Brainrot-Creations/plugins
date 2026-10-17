@@ -4,5 +4,8 @@
   "author": {
     "name": "Brainrot Creations",
     "email": "support@brainrotcreations.com"
-  }
+  },
+  "version": "1.0.0",
+  "homepage": "https://www.brainrotcreations.com",
+  "privacyPolicyUrl": "https://www.brainrotcreations.com/privacy"
 }
