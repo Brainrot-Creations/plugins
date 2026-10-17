@@ -90,7 +90,8 @@
               "prompt": "Explain how compound interest works."
             }
           ]
-        }
+        },
+        "demo_recording_url": "https://drive.google.com/file/d/1b1pBfHyaC8Ytvd0wZFyHgXbv3gAurd37/view?usp=sharing"
       },
       "publication": {
         "release_notes": "First release: live market data (public, private, commodities, FX, circle rates) and Brainrot portfolios with live valuation and undo."
