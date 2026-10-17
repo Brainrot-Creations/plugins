@@ -17,8 +17,12 @@ Nothing up front. Ask only for what a step needs.
    - If the tool asks for sign-in or returns a 401, tell the user to connect Brainrot Finance with their Brainrot account (they approve it on brainrotcreations.com), then stop until they have.
    - If they already have a portfolio with holdings, say so, call `portfolio_view` (default `show`) to show its value and holdings, and stop: setup is done.
 2. **Base currency.** Ask which currency totals should be shown in (for example USD or INR). Don't assume one from their location or language. Pass it as `baseCurrency` on the first `portfolio_add`, or set it later with `portfolio_settings`.
-3. **Holdings.** Ask where they invest (brokers or platforms, and accounts within them) and what they hold. For each holding you need a symbol or name, quantity, price per unit, date and currency. Use `search` if you need to find a symbol. Ask for anything missing; never invent a price, quantity or date. Add them with `portfolio_add`, using the platform and account as the `path` (for example `["Robinhood", "Individual"]`).
-   - If they paste a full export or a `transactions.json` document, use `portfolio_replace` with the document instead, after confirming it should replace the empty portfolio.
+3. **Holdings.** Ask where they invest (brokers or platforms, and accounts within them) and what they hold. For each holding you need a symbol or name, quantity, what they paid per unit, the purchase date and currency. Use `search` if you need to find a symbol. Ask for anything missing; never invent a price, quantity or date. Add them with `portfolio_add`, using the platform and account as the `path` (for example `["Robinhood", "Individual"]`), all of one account's holdings in a single call.
+   - `price` is what they paid (cost basis). The live price comes from `source`: leave `source` out so it's priced automatically — right for stocks, ETFs, crypto, mutual funds and private companies like SpaceX. Use `fixed` only for something with no market price (a bond, jewellery), and set `currentPrice` for it.
+   - For a stake they only partly own (e.g. a joint account), keep the full quantity and set `ownership` (e.g. 50) — don't shrink the quantity.
+   - Keep real purchase dates from their records rather than today's date.
+   - Read the `warnings` that come back and fix anything they flag (for example a holding that won't get a live price).
+   - If they paste a full export or a `transactions.json` document, use `portfolio_replace` with the document instead (one call, one version), after confirming it should replace the empty portfolio. Keep its sources, dates and ownership as they are.
 4. **Show the result.** Call `portfolio_view` and summarise the total, the largest holdings and anything valued at cost because no live price was found (see `warnings`).
 5. **Tell them what's next:** they can ask for its value any time, add or edit transactions in plain language, and undo any change (`portfolio_undo`).
 
