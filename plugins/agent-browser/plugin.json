@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agent-browser",
+  "version": "1.0.0",
+  "description": "Fast native browser automation for AI agents. Navigate, screenshot, fill forms, click, and extract data from any webpage.",
+  "author": {
+    "name": "Brainrot Creations",
+    "email": "support@brainrotcreations.com",
+    "url": "https://www.brainrotcreations.com"
+  },
+  "homepage": "https://github.com/Brainrot-Creations/agent-browser",
+  "repository": "https://github.com/Brainrot-Creations/plugins",
+  "license": "MIT",
+  "keywords": [
+    "browser",
+    "automation"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Agent Browser",
+        "shortDescription": "Fast native browser automation: navigate, screenshot, fill forms, click and extract data.",
+        "developerName": "Brainrot Creations",
+        "category": "Developer Tools",
+        "websiteURL": "https://github.com/Brainrot-Creations/agent-browser",
+        "defaultPrompt": [
+          "Use Agent Browser to screenshot example.com."
+        ],
+        "brandColor": "#111111"
+      }
+    }
+  }
+}

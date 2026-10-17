@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "brainrot-finance",
+  "version": "1.0.0",
+  "description": "Live market data (stocks, crypto, currency, gold and silver, private markets) and your Brainrot portfolios, from Brainrot Finance.",
+  "author": {
+    "name": "Brainrot Creations",
+    "email": "support@brainrotcreations.com",
+    "url": "https://www.brainrotcreations.com"
+  },
+  "homepage": "https://finance.brainrotcreations.com",
+  "repository": "https://github.com/Brainrot-Creations/plugins",
+  "license": "MIT",
+  "keywords": [
+    "finance",
+    "stocks",
+    "portfolio",
+    "markets"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Brainrot Finance",
+        "shortDescription": "Market data and your Brainrot portfolios.",
+        "longDescription": "Quotes and history for stocks, crypto, currencies, gold and silver and private-market companies, plus portfolios you can view, value and edit after signing in with your Brainrot account.",
+        "developerName": "Brainrot Creations",
+        "category": "Finance",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://finance.brainrotcreations.com",
+        "defaultPrompt": [
+          "Use Brainrot Finance to get the latest AAPL quote.",
+          "Use Brainrot Finance to value my portfolio in INR."
+        ],
+        "brandColor": "#111111"
+      }
+    }
+  }
+}

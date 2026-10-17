@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "partiful",
+  "version": "1.0.0",
+  "description": "Partiful event discovery MCP — explore city feeds, fetch event details, and look up user profiles. No API key required.",
+  "author": {
+    "name": "Brainrot Creations",
+    "email": "support@brainrotcreations.com",
+    "url": "https://www.brainrotcreations.com"
+  },
+  "homepage": "https://partiful.com",
+  "repository": "https://github.com/Brainrot-Creations/plugins",
+  "license": "MIT",
+  "keywords": [
+    "events"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Partiful",
+        "shortDescription": "Explore Partiful city feeds, event details and profiles.",
+        "developerName": "Brainrot Creations",
+        "category": "Lifestyle",
+        "websiteURL": "https://partiful.com",
+        "defaultPrompt": [
+          "Use Partiful to find events in NYC this weekend."
+        ],
+        "brandColor": "#111111"
+      }
+    }
+  }
+}

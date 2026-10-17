@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mta",
+  "version": "1.0.0",
+  "description": "MTA BusTime MCP — real-time bus arrivals at any stop, vehicle positions on a route, and stop listings. No API key required.",
+  "author": {
+    "name": "Brainrot Creations",
+    "email": "support@brainrotcreations.com",
+    "url": "https://www.brainrotcreations.com"
+  },
+  "homepage": "https://bustime.mta.info",
+  "repository": "https://github.com/Brainrot-Creations/plugins",
+  "license": "MIT",
+  "keywords": [
+    "nyc",
+    "transit",
+    "bus"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "MTA BusTime",
+        "shortDescription": "Real-time NYC bus arrivals, vehicle positions and stops.",
+        "developerName": "Brainrot Creations",
+        "category": "Travel",
+        "websiteURL": "https://bustime.mta.info",
+        "defaultPrompt": [
+          "Use MTA BusTime to show arrivals at the nearest M15 stop."
+        ],
+        "brandColor": "#111111"
+      }
+    }
+  }
+}

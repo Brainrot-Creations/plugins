@@ -1,7 +1,7 @@
-<h1 align="center">Brainrot Creations · Claude Plugins</h1>
+<h1 align="center">Brainrot Creations · Plugins</h1>
 
 <p align="center">
-  <strong>Official Claude Code plugins by Brainrot Creations.</strong>
+  <strong>Official Brainrot Creations plugins for Claude Code, Codex and ChatGPT.</strong>
 </p>
 
 <p align="center">
@@ -13,7 +13,7 @@
 
 ## Install
 
-In Claude Code:
+### Claude Code
 
 ```
 /plugin marketplace add Brainrot-Creations/plugins
@@ -22,6 +22,7 @@ In Claude Code:
 Then install individual plugins:
 
 ```
+/plugin install brainrot-finance@brainrot-creations
 /plugin install amc-theatres@brainrot-creations
 /plugin install socials@brainrot-creations
 /plugin install agent-browser@brainrot-creations
@@ -34,9 +35,32 @@ Then install individual plugins:
 /reload-plugins
 ```
 
+### Codex and ChatGPT
+
+```bash
+codex plugin marketplace add Brainrot-Creations/plugins
+codex plugin add brainrot-finance@brainrot-creations
+```
+
+Or, in the ChatGPT desktop app, open the Plugins Directory and pick the **Brainrot Creations** marketplace.
+The Codex/ChatGPT catalog is [`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json): Brainrot Finance,
+Socials, Agent Browser, Cursor Agents, AMC Theatres, Partiful and MTA. Codex and OpenAI aren't listed there, since
+they exist to reach those tools from Claude.
+
+Each plugin has its Claude Code files (`.claude-plugin/plugin.json`, `.mcp.json`) and its portable
+[Agent Plugins](https://agent-plugins.org) files (`plugin.json`, `mcp.json`) side by side.
+
 ---
 
 ## Plugins
+
+### [Brainrot Finance](./plugins/brainrot-finance)
+
+Live quotes and history for stocks, crypto, currencies, gold and silver and private-market companies, plus your
+Brainrot portfolios. Connects to `https://mcp.finance.brainrotcreations.com/mcp`; you sign in with your Brainrot
+account and approve the app on brainrotcreations.com.
+
+**Install:** `/plugin install brainrot-finance@brainrot-creations` (Claude Code) · `codex plugin add brainrot-finance@brainrot-creations` (Codex)
 
 ### [AMC Theatres](./plugins/amc-theatres)
 

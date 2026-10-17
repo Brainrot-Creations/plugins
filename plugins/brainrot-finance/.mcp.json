@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "brainrot-finance": {
+      "type": "http",
+      "url": "https://mcp.finance.brainrotcreations.com/mcp"
+    }
+  }
+}

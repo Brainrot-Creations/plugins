@@ -8,6 +8,13 @@
   },
   "plugins": [
     {
+      "name": "brainrot-finance",
+      "description": "Brainrot Finance \u2014 live quotes and history for stocks, crypto, currencies, gold and silver and private markets, plus your Brainrot portfolios. Sign in with your Brainrot account.",
+      "source": "./plugins/brainrot-finance",
+      "category": "external-integrations",
+      "homepage": "https://finance.brainrotcreations.com"
+    },
+    {
       "name": "socials",
       "description": "Connect Claude to X, LinkedIn, and Reddit via the Socials browser extension. Post, engage, search, and manage social media directly from Claude Code.",
       "source": "./plugins/socials",

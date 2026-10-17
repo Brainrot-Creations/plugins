@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "socials": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@brainrotcreations/socials"
+      ],
+      "env": {
+        "SOCIALS_MCP_RECLAIM_PORT": "1"
+      }
+    }
+  }
+}

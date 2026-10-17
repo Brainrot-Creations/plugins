@@ -1,0 +1,92 @@
+{
+  "name": "brainrot-creations",
+  "interface": {
+    "displayName": "Brainrot Creations"
+  },
+  "plugins": [
+    {
+      "name": "brainrot-finance",
+      "source": {
+        "source": "local",
+        "path": "./plugins/brainrot-finance"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Finance"
+    },
+    {
+      "name": "socials",
+      "source": {
+        "source": "local",
+        "path": "./plugins/socials"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Social"
+    },
+    {
+      "name": "agent-browser",
+      "source": {
+        "source": "local",
+        "path": "./plugins/agent-browser"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "cursor-agents",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cursor-agents"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "amc-theatres",
+      "source": {
+        "source": "local",
+        "path": "./plugins/amc-theatres"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Lifestyle"
+    },
+    {
+      "name": "partiful",
+      "source": {
+        "source": "local",
+        "path": "./plugins/partiful"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Lifestyle"
+    },
+    {
+      "name": "mta",
+      "source": {
+        "source": "local",
+        "path": "./plugins/mta"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Travel"
+    }
+  ]
+}
