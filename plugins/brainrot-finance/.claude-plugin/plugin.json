@@ -1,11 +1,28 @@
 {
   "name": "brainrot-finance",
+  "displayName": "Brainrot Finance",
   "description": "Live market data (stocks, crypto, currency, gold and silver, private markets) and your Brainrot portfolios, from Brainrot Finance.",
+  "version": "1.0.1",
   "author": {
     "name": "Brainrot Creations",
     "email": "support@brainrotcreations.com"
   },
-  "version": "1.0.1",
   "homepage": "https://www.brainrotcreations.com",
-  "privacyPolicyUrl": "https://www.brainrotcreations.com/privacy"
+  "repository": "https://github.com/Brainrot-Creations/plugins",
+  "documentationUrl": "https://mcp.finance.brainrotcreations.com/docs",
+  "supportUrl": "https://www.brainrotcreations.com/support",
+  "privacyPolicyUrl": "https://www.brainrotcreations.com/privacy",
+  "termsOfServiceUrl": "https://www.brainrotcreations.com/terms",
+  "keywords": [
+    "finance",
+    "stocks",
+    "portfolio",
+    "investing",
+    "crypto",
+    "private markets",
+    "pre-ipo",
+    "mutual funds",
+    "gold",
+    "india"
+  ]
 }
