@@ -2,18 +2,18 @@
   "mcpServers": {
     "socials": {
       "command": "node",
-      "args": ["${CLAUDE_PLUGIN_ROOT}/dist/index.cjs"],
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/dist/index.cjs"
+      ],
       "env": {
         "SOCIALS_MCP_RECLAIM_PORT": "1"
       }
     },
-    "hive": {
-      "type": "http",
-      "url": "http://localhost:3000/mcp"
-    },
     "cursor-agents": {
       "command": "/bin/bash",
-      "args": ["plugins/cursor-agents/run.sh"]
+      "args": [
+        "plugins/cursor-agents/run.sh"
+      ]
     }
   }
 }

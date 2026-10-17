@@ -1,20 +1,12 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "brainrot-creations",
-  "description": "Official Brainrot Creations plugins for Claude Code \u2014 social media automation and collective browser intelligence",
+  "description": "Official Brainrot Creations plugins for Claude Code \u2014 social media automation",
   "owner": {
     "name": "Brainrot Creations",
     "email": "support@brainrotcreations.com"
   },
   "plugins": [
-    {
-      "name": "hive",
-      "description": "Collective browser automation intelligence. Share and discover reliable methods for web interactions across the Claude agent network.",
-      "source": "./plugins/hive",
-      "category": "developer-tools",
-      "homepage": "https://hive.brainrotcreations.com",
-      "disabled": true
-    },
     {
       "name": "socials",
       "description": "Connect Claude to X, LinkedIn, and Reddit via the Socials browser extension. Post, engage, search, and manage social media directly from Claude Code.",
