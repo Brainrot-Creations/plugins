@@ -47,6 +47,10 @@ The Codex/ChatGPT catalog is [`.agents/plugins/marketplace.json`](./.agents/plug
 Socials, Agent Browser, Cursor Agents, AMC Theatres, Partiful and MTA. Codex and OpenAI aren't listed there, since
 they exist to reach those tools from Claude.
 
+To build the ZIP for OpenAI's plugin directory, run `scripts/package-openai.sh <plugin>` (output in
+`dist/`, not committed). Server-side tool changes go live without a new package; bump `version` in the
+plugin's `plugin.json` and re-run only when its listing, assets or `mcp.json` change.
+
 Each plugin has its Claude Code files (`.claude-plugin/plugin.json`, `.mcp.json`) and its portable
 [Agent Plugins](https://agent-plugins.org) files (`plugin.json`, `mcp.json`) side by side.
 

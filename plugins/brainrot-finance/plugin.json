@@ -8,7 +8,7 @@
     "email": "support@brainrotcreations.com",
     "url": "https://www.brainrotcreations.com"
   },
-  "homepage": "https://finance.brainrotcreations.com",
+  "homepage": "https://www.brainrotcreations.com",
   "repository": "https://github.com/Brainrot-Creations/plugins",
   "license": "MIT",
   "keywords": [
@@ -21,21 +21,81 @@
     "com.openai": {
       "interface": {
         "displayName": "Brainrot Finance",
-        "shortDescription": "Market data and your Brainrot portfolios.",
-        "longDescription": "Quotes and history for stocks, crypto, currencies, gold and silver and private-market companies, plus portfolios you can view, value and edit after signing in with your Brainrot account.",
+        "shortDescription": "Markets and your portfolios",
+        "longDescription": "Brainrot Finance brings live market data and your own investment portfolios into ChatGPT.\n\nLook up prices and history for US and global stocks, ETFs, crypto and mutual funds; private and pre-IPO companies (Hiive, Forge Global, Nasdaq Private Market); gold and silver rates in Indian cities; money-transfer exchange rates; and Indian property circle rates.\n\nSign in with your Brainrot account to keep portfolios: add buys, sells and income under platforms and accounts, see every holding valued live in your base currency with totals, P&L and day change, and undo any change.\n\nFor people who track investments across brokers, countries and private markets. Prices come from third-party sources and can be delayed or unavailable; private-market prices are indicative secondary prices. Brainrot Finance is for information only and doesn't give investment advice or place trades.",
         "developerName": "Brainrot Creations",
         "category": "Finance",
         "capabilities": [
           "Read",
           "Write"
         ],
-        "websiteURL": "https://finance.brainrotcreations.com",
+        "websiteURL": "https://www.brainrotcreations.com",
+        "supportURL": "https://www.brainrotcreations.com/support",
+        "privacyPolicyURL": "https://www.brainrotcreations.com/privacy",
+        "termsOfServiceURL": "https://www.brainrotcreations.com/terms",
         "defaultPrompt": [
-          "Use Brainrot Finance to get the latest AAPL quote.",
-          "Use Brainrot Finance to value my portfolio in INR."
+          "Use Brainrot Finance to get Apple's latest stock price.",
+          "Use Brainrot Finance to value my portfolio in USD.",
+          "Use Brainrot Finance to check today's 24k gold rate in Mumbai."
         ],
-        "brandColor": "#111111"
-      }
+        "brandColor": "#111111",
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Live public-market quote",
+              "prompt": "What's Apple's stock price right now?",
+              "tools_triggered": "quote",
+              "expected_behavior": "Returns AAPL's latest price, currency, day change and market state from Brainrot Finance."
+            },
+            {
+              "description": "Private-market price",
+              "prompt": "What's SpaceX trading at on Hiive?",
+              "tools_triggered": "hiive_quote",
+              "expected_behavior": "Returns SpaceX's latest Hiive indicative price per share and its date, noting it's a secondary-market price."
+            },
+            {
+              "description": "Gold rate in an Indian city",
+              "prompt": "What's the 24k gold rate in Mumbai today?",
+              "tools_triggered": "gold_rate",
+              "expected_behavior": "Returns today's 24K gold rate in INR per gram and per 10 grams for Mumbai."
+            },
+            {
+              "description": "Value the signed-in user's portfolio",
+              "prompt": "What's my portfolio worth in USD?",
+              "tools_triggered": "portfolio_value",
+              "expected_behavior": "Signed in as the test account, returns total value in USD with each holding, cash, P&L and return %."
+            },
+            {
+              "description": "Add a transaction, then undo it",
+              "prompt": "Add a buy of 2 MSFT at $400 on 2026-01-15 to my Robinhood account, then undo it.",
+              "tools_triggered": "portfolio_add, portfolio_undo",
+              "expected_behavior": "Adds the MSFT buy under Robinhood, confirms it, then restores the previous version so the portfolio is unchanged."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unrelated creative request",
+              "prompt": "Write a haiku about autumn leaves."
+            },
+            {
+              "description": "Unrelated factual question",
+              "prompt": "What's the weather in Paris tomorrow?"
+            },
+            {
+              "description": "General finance concept with no data needed",
+              "prompt": "Explain how compound interest works."
+            }
+          ]
+        }
+      },
+      "publication": {
+        "release_notes": "First release: live market data (public, private, commodities, FX, circle rates) and Brainrot portfolios with live valuation and undo."
+      },
+      "onboardingSkill": "./skills/setup/SKILL.md"
     }
   }
 }
