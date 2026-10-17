@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "brainrot-finance",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Live market data (stocks, crypto, currency, gold and silver, private markets) and your Brainrot portfolios, from Brainrot Finance.",
   "author": {
     "name": "Brainrot Creations",
@@ -72,8 +72,8 @@
             {
               "description": "Add a transaction, then undo it",
               "prompt": "Add a buy of 2 MSFT at $400 on 2026-01-15 to my Robinhood account, then undo it.",
-              "tools_triggered": "portfolio_add, portfolio_edit",
-              "expected_behavior": "Adds the MSFT buy under Robinhood > Individual with portfolio_add, confirms it, then reverts with portfolio_edit (action undo) so the portfolio is unchanged."
+              "tools_triggered": "portfolio_add, portfolio_undo",
+              "expected_behavior": "Adds the MSFT buy under Robinhood > Individual with portfolio_add, confirms it, then reverts with portfolio_undo so the portfolio is unchanged."
             }
           ],
           "negative": [
@@ -94,7 +94,7 @@
         "demo_recording_url": "https://drive.google.com/file/d/1b1pBfHyaC8Ytvd0wZFyHgXbv3gAurd37/view?usp=sharing"
       },
       "publication": {
-        "release_notes": "First release: live market data (public, private, commodities, FX, circle rates) and Brainrot portfolios with live valuation and undo."
+        "release_notes": "First release: live market data (public, private, commodities, FX, property) and Brainrot portfolios with live valuation and undo."
       },
       "onboardingSkill": "./skills/setup/SKILL.md"
     }
