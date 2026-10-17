@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "brainrot-creations",
-  "description": "Official Brainrot Creations plugins for Claude Code \u2014 social media automation and collective browser intelligence",
+  "name": "brainrot-creations-beta",
+  "description": "Beta Brainrot Creations plugins for Claude Code \u2014 includes features still in testing, such as Hive.",
   "owner": {
     "name": "Brainrot Creations",
     "email": "support@brainrotcreations.com"
@@ -12,8 +12,7 @@
       "description": "Collective browser automation intelligence. Share and discover reliable methods for web interactions across the Claude agent network.",
       "source": "./plugins/hive",
       "category": "developer-tools",
-      "homepage": "https://hive.brainrotcreations.com",
-      "disabled": true
+      "homepage": "https://hive.brainrotcreations.com"
     },
     {
       "name": "socials",

@@ -40,7 +40,7 @@ If `hive_pull`, `hive_contribute`, or `hive_vote` are not available as tools, Hi
 
 > Hive isn't enabled — you're missing collective browser intelligence. Install it with:
 > ```
-> /plugin install hive@brainrot-creations
+> /plugin install hive@brainrot-creations-beta
 > ```
 > `/reload-plugins`
 >
