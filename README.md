@@ -1,7 +1,7 @@
 <h1 align="center">Brainrot Creations · Plugins</h1>
 
 <p align="center">
-  <strong>Official Brainrot Creations plugins for Claude Code, Codex and ChatGPT.</strong>
+  <strong>Official Brainrot Creations plugins for Claude Code, Codex, ChatGPT, GitHub Copilot and Grok.</strong>
 </p>
 
 <p align="center">
@@ -35,6 +35,21 @@ Then install individual plugins:
 /reload-plugins
 ```
 
+### Grok Build
+
+Grok reads [`.grok-plugin/marketplace.json`](./.grok-plugin/marketplace.json) from this repo, which lists only Brainrot Finance.
+Add the marketplace (Grok also picks it up if you've added it in Claude Code), then open `/plugins` and install **Brainrot Finance**
+from the Marketplace tab.
+
+### GitHub Copilot CLI
+
+```bash
+copilot plugin marketplace add Brainrot-Creations/plugins
+copilot plugin install brainrot-finance@brainrot-creations
+```
+
+The Copilot catalog is [`.github/plugin/marketplace.json`](./.github/plugin/marketplace.json) and lists only Brainrot Finance.
+
 ### Codex and ChatGPT
 
 ```bash
@@ -43,16 +58,15 @@ codex plugin add brainrot-finance@brainrot-creations
 ```
 
 Or, in the ChatGPT desktop app, open the Plugins Directory and pick the **Brainrot Creations** marketplace.
-The Codex/ChatGPT catalog is [`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json): Brainrot Finance,
-Socials, Agent Browser, Cursor Agents, AMC Theatres, Partiful and MTA. Codex and OpenAI aren't listed there, since
-they exist to reach those tools from Claude.
+The Codex/ChatGPT catalog is [`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json) and lists the
+same plugins as the Claude Code one (Luma Events is listed but not installable, matching `disabled` in Claude Code).
 
 To build the ZIP for OpenAI's plugin directory, run `scripts/package-openai.sh <plugin>` (output in
 `dist/`, not committed). Server-side tool changes go live without a new package; bump `version` in the
 plugin's `plugin.json` and re-run only when its listing, assets or `mcp.json` change.
 
 Each plugin has its Claude Code files (`.claude-plugin/plugin.json`, `.mcp.json`) and its portable
-[Agent Plugins](https://agent-plugins.org) files (`plugin.json`, `mcp.json`) side by side.
+[Agent Plugins](https://agent-plugins.org) files (`plugin.json`, `mcp.json`) side by side. Brainrot Finance also has a Grok manifest (`.grok-plugin/plugin.json`).
 
 ---
 

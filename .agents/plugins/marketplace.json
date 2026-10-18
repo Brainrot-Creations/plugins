@@ -53,6 +53,18 @@
       "category": "Developer Tools"
     },
     {
+      "name": "luma-events",
+      "source": {
+        "source": "local",
+        "path": "./plugins/luma-events"
+      },
+      "policy": {
+        "installation": "NOT_AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Lifestyle"
+    },
+    {
       "name": "amc-theatres",
       "source": {
         "source": "local",
@@ -63,6 +75,30 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Lifestyle"
+    },
+    {
+      "name": "codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "openai",
+      "source": {
+        "source": "local",
+        "path": "./plugins/openai"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
     },
     {
       "name": "partiful",

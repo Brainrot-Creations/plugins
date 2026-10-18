@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "openai",
+  "version": "1.0.0",
+  "description": "OpenAI API plugin — chat completions (GPT-4o, o1, o3-mini) and DALL-E image generation. Requires OPENAI_API_KEY.",
+  "author": {
+    "name": "Brainrot Creations",
+    "email": "support@brainrotcreations.com",
+    "url": "https://www.brainrotcreations.com"
+  },
+  "homepage": "https://platform.openai.com/docs",
+  "repository": "https://github.com/Brainrot-Creations/plugins",
+  "license": "MIT",
+  "keywords": [
+    "openai",
+    "gpt",
+    "dall-e"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "OpenAI",
+        "shortDescription": "Chat completions and DALL-E image generation via the OpenAI API.",
+        "developerName": "Brainrot Creations",
+        "category": "Developer Tools",
+        "websiteURL": "https://platform.openai.com/docs",
+        "defaultPrompt": [
+          "Use OpenAI to generate an image of a lighthouse at dusk."
+        ],
+        "brandColor": "#111111"
+      }
+    }
+  }
+}

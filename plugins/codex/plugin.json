@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "codex",
+  "version": "1.0.0",
+  "description": "Delegate tasks to OpenAI Codex CLI. Run coding tasks synchronously or in the background and track their output.",
+  "author": {
+    "name": "Brainrot Creations",
+    "email": "support@brainrotcreations.com",
+    "url": "https://www.brainrotcreations.com"
+  },
+  "homepage": "https://developers.openai.com/codex/cli",
+  "repository": "https://github.com/Brainrot-Creations/plugins",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "agents",
+    "coding"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Codex",
+        "shortDescription": "Delegate coding tasks to Codex CLI and track their output.",
+        "developerName": "Brainrot Creations",
+        "category": "Developer Tools",
+        "websiteURL": "https://developers.openai.com/codex/cli",
+        "defaultPrompt": [
+          "Use Codex to write tests for this module in the background."
+        ],
+        "brandColor": "#111111"
+      }
+    }
+  }
+}

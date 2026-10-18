@@ -15,6 +15,12 @@ Live market data and your own investment portfolios, in Claude.
 
 Then run `/brainrot-finance:setup`. You'll sign in with your Brainrot account and approve Claude on brainrotcreations.com; market data works right away, and setup walks you through creating your first portfolio.
 
+**Grok Build:** open `/plugins`, find **Brainrot Finance** in the Marketplace tab and install it. On first connection Grok opens Brainrot sign-in in your browser.
+
+**GitHub Copilot CLI:** `copilot plugin marketplace add Brainrot-Creations/plugins`, then `copilot plugin install brainrot-finance@brainrot-creations`.
+
+**Codex:** `codex plugin marketplace add Brainrot-Creations/plugins`, then `codex plugin add brainrot-finance@brainrot-creations`.
+
 ## Tools
 
 | Tool | What it does |
@@ -32,8 +38,19 @@ Then run `/brainrot-finance:setup`. You'll sign in with your Brainrot account an
 | `portfolio_replace` | Import a whole portfolio |
 | `portfolio_undo` | Go back to an earlier version |
 
+## Network and credentials
+
+The plugin runs no local code. It connects to one hosted MCP server:
+
+- `https://mcp.finance.brainrotcreations.com/mcp`: MCP over streamable HTTP
+- OAuth 2.1 with dynamic client registration, served by the Brainrot account service; you sign in and approve the app at `https://www.brainrotcreations.com`
+
+Credentials: a Brainrot account. Don't paste passwords or tokens into chat. Market tools work without signing in; portfolio tools act only on the signed-in user's own portfolios.
+
 ## Data and privacy
 
 Your portfolios are stored in your Brainrot account and only you, and apps you've approved, can read or change them; disconnect an app any time at [connected apps](https://www.brainrotcreations.com/redirect/oauth/consent). Market data comes from third-party sources and can be delayed; private-market prices are indicative. Brainrot Finance is for information only — it doesn't give investment advice or place trades.
+
+Licensed under MIT (see the repository [LICENSE](../../LICENSE)); use of the hosted service is governed by the Brainrot [Terms](https://www.brainrotcreations.com/terms).
 
 [Privacy policy](https://www.brainrotcreations.com/privacy) · [Terms](https://www.brainrotcreations.com/terms) · [Support](https://www.brainrotcreations.com/support) · [API docs](https://mcp.finance.brainrotcreations.com/docs)

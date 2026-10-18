@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "luma-events",
+  "version": "1.0.0",
+  "description": "Luma Discover + events + calendar MCP — browse events near you, by place, category, or calendar. Powered by api.brainrotcreations.com.",
+  "author": {
+    "name": "Brainrot Creations",
+    "email": "support@brainrotcreations.com",
+    "url": "https://www.brainrotcreations.com"
+  },
+  "homepage": "https://luma.com",
+  "repository": "https://github.com/Brainrot-Creations/plugins",
+  "license": "MIT",
+  "keywords": [
+    "luma",
+    "events",
+    "calendar"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Luma Events",
+        "shortDescription": "Browse Luma events by place, category or calendar.",
+        "developerName": "Brainrot Creations",
+        "category": "Lifestyle",
+        "websiteURL": "https://luma.com",
+        "defaultPrompt": [
+          "Use Luma Events to find tech events in New York this week."
+        ],
+        "brandColor": "#111111"
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "brainrot-creations",
+  "metadata": {
+    "description": "Official Brainrot Creations plugins for GitHub Copilot",
+    "version": "1.0.0"
+  },
+  "owner": {
+    "name": "Brainrot Creations",
+    "email": "support@brainrotcreations.com"
+  },
+  "plugins": [
+    {
+      "name": "brainrot-finance",
+      "source": "./plugins/brainrot-finance",
+      "description": "Brainrot Finance — live quotes and history for stocks, crypto, currencies, gold and silver and private markets, plus your Brainrot portfolios. Sign in with your Brainrot account.",
+      "version": "1.0.2",
+      "author": {
+        "name": "Brainrot Creations",
+        "email": "support@brainrotcreations.com",
+        "url": "https://www.brainrotcreations.com"
+      },
+      "homepage": "https://finance.brainrotcreations.com",
+      "repository": "https://github.com/Brainrot-Creations/plugins",
+      "license": "MIT",
+      "keywords": [
+        "brainrot-finance",
+        "finance",
+        "stocks",
+        "portfolio",
+        "investing",
+        "crypto",
+        "private-markets",
+        "mutual-funds",
+        "gold"
+      ]
+    }
+  ]
+}
