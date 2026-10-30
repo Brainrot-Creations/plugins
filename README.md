@@ -62,7 +62,8 @@ The Codex/ChatGPT catalog is [`.agents/plugins/marketplace.json`](./.agents/plug
 same plugins as the Claude Code one (Luma Events is listed but not installable, matching `disabled` in Claude Code).
 
 To build the ZIP for OpenAI's plugin directory, run `scripts/package-openai.sh <plugin>` (output in
-`dist/`, not committed). Server-side tool changes go live without a new package; bump `version` in the
+`dist/`, not committed). For a Claude plugin upload, `scripts/package-claude.sh <plugin>` builds
+`dist/<plugin>-claude-<version>.zip` from the Claude Code files. Server-side tool changes go live without a new package; bump `version` in the
 plugin's `plugin.json` and re-run only when its listing, assets or `mcp.json` change.
 
 Each plugin has its Claude Code files (`.claude-plugin/plugin.json`, `.mcp.json`) and its portable
